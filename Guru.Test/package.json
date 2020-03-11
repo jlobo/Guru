@@ -1,0 +1,40 @@
+{
+  "name": "guru-test",
+  "version": "1.0.0",
+  "description": "Integration tests for the Guru platform",
+  "author": "tmp@tmp.com",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  },
+  "scripts": {
+    "server": "node -r esm index.js",
+    "check": "tsc --allowJs --checkJs --noEmit --target ES5 src/*.js",
+    "test": "mocha -r esm",
+    "test-watch": "nodemon --watch test -x \"mocha -r esm\""
+  },
+  "dependencies": {
+    "superagent": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/runtime": "^7.7.6",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "esm": "^3.2.25",
+    "mocha": "^6.2.2",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.7.4"
+  },
+  "keywords": [
+    "Guru"
+  ]
+}
